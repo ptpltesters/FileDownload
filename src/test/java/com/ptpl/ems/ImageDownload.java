@@ -54,7 +54,20 @@ public class ImageDownload extends Base{
 
 //		String s= Util.getDataFromExcel();
 //		System.out.println(s);
-
+		
+		
+//		String defaultPath = System.getProperty("user.dir");
+//		String gisPath = defaultPath + "/HescomSample/" +divisioonFolder+ "/" +mscode +"/GIS";
+//		String thermalPath = defaultPath + "/HescomSample/" +divisioonFolder+ "/" +mscode +"/THERMAL";
+//
+//		File gisFolder = new File(gisPath);
+//		File thermalFolder = new File(thermalPath);
+//		gisFolder.mkdir();
+//		thermalFolder.mkdir();
+//		
+//		System.out.println(gisPath);
+//		System.out.println(thermalPath);
+		
 
 	}
 	

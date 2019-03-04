@@ -15,7 +15,7 @@ public class Util {
 		
 		ArrayList<Object[]> myData = new ArrayList<Object[]>();
 		xslPath = System.getProperty("user.dir");
-		xslPath = xslPath +"/src/test/java/com/ptpl/testdata/ImageHescomsample50.xlsx";
+		xslPath = xslPath +"/src/test/java/com/ptpl/testdata/SampleImage.xlsx";
 		try {
 			reader = new Xls_Reader(xslPath);
 		} catch (Exception e) {
@@ -24,11 +24,11 @@ public class Util {
 		
 		for (int rowNum = 2; rowNum < reader.getRowCount("Sheet1"); rowNum++) {
 			String divisionName = reader.getCellData("Sheet1", "Division", rowNum);
-			String mscode = reader.getCellData("Sheet1", "Mscode", rowNum);
-//			String imageType = reader.getCellData("Sheet1", "ImageType", rowNum);
-//			String fileName = reader.getCellData("Sheet1", "fileName", rowNum);
-//			imageType, fileName
-			Object obj[] = {divisionName, mscode };
+			String DTCCODE = reader.getCellData("Sheet1", "DTCCODE", rowNum);
+			String imageType = reader.getCellData("Sheet1", "SurveyCycleDesc", rowNum);
+			String fileName = reader.getCellData("Sheet1", "ImageFileName", rowNum);
+			
+			Object obj[] = {divisionName, DTCCODE, imageType, fileName};
 			myData.add(obj);
 		}
 //		String divisionName= reader.getCellData("Sheet1", "Division1", 2);
